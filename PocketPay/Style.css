@@ -1,0 +1,209 @@
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f1f4f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #004aad, #0077ff);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 5px solid #002f6c;
+}
+
+header h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: #00337a;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    padding: 14px 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #005fff;
+    transform: translateY(-3px);
+}
+
+/* SECTIONS */
+section {
+    width: 90%;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+
+/* SECTION TITLES */
+h2 {
+    color: #004aad;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+/* LIST STYLING */
+ul li {
+    margin: 10px 0;
+    padding: 10px;
+    background: #eef5ff;
+    border-left: 5px solid #004aad;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+ul li:hover {
+    background: #dceaff;
+    transform: translateX(6px);
+}
+
+/* FOOTER */
+footer {
+    background-color: #004aad;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* IMPLEMENTATION GRID */
+.implement {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* GRID BOXES */
+.implement div {
+    padding: 25px;
+    border-radius: 8px;
+    color: white;
+    min-height: 140px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+/* Hover animation */
+.implement div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* STEP NUMBER (Left Column) */
+.implement div:nth-child(3n-2) {
+    background-color: #2f4f2f;
+    font-weight: bold;
+}
+
+/* STEP TITLE (Middle Column) */
+.implement div:nth-child(3n-1) {
+    background-color: #446b44;
+}
+
+/* STEP DESCRIPTION (Right Column) */
+.implement div:nth-child(3n) {
+    background-color: #5b8b5b;
+    text-align: left;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    .implement {
+        grid-template-columns: 1fr;
+    }
+    section {
+        width: 95%;
+    }
+}
+
+/* ------------------------------------------ */
+/* IMAGE STYLING — 5 Modern Styles */
+/* ------------------------------------------ */
+
+/* 1. SIMPLE IMAGE */
+.img-normal {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* 2. ROUNDED CORNERS */
+.img-rounded {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* 3. CIRCLE IMAGE */
+.img-circle {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* 4. HOVER ZOOM */
+.img-zoom {
+    width: 100%;
+    transition: 0.4s ease;
+    border-radius: 10px;
+}
+.img-zoom:hover {
+    transform: scale(1.05);
+}
+
+/* 5. SHADOW + GRAYSCALE ON HOVER */
+.img-gray-hover {
+    width: 100%;
+    filter: grayscale(80%);
+    transition: 0.4s ease;
+    border-radius: 6px;
+}
+.img-gray-hover:hover {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
